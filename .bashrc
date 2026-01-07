@@ -5,7 +5,12 @@
 
 #[settings by dhbarbosa]
 
-export PATH=$HOME/.local/bin:$PATH
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$HOME/.local/bin:$HOME/Develop/flutter/bin"
+export CHROME_EXECUTABLE=/opt/google/chrome/google-chrome
+
+
 source ~/.local/share/omarchy/default/bash/rc
 eval "$(starship init bash)"
 
@@ -27,3 +32,6 @@ alias dprune="docker system prune -af"
 alias adog1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
 alias adog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"
 alias adog="adog1"
+
+#[android]
+alias android-studio='/opt/android-studio/bin/studio.sh'
